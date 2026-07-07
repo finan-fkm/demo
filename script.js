@@ -10,9 +10,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-document.querySelector(".next-btn").addEventListener("click", function () {
-    window.location.href = "page2.html";
-});
+    const nextBtn = document.querySelector(".next-btn");
+    if (nextBtn) {
+        nextBtn.addEventListener("click", function () {
+            window.location.href = "page2.html";
+        });
+    }
 
 });
+
 

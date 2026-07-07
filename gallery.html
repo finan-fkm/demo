@@ -11,15 +11,6 @@
     <style>
         * { margin:0; padding:0; box-sizing:border-box; }
         body { font-family:'Poppins',sans-serif; overflow-x:hidden; background:#f7f9fc; }
-        .navbar{ padding:18px 0; transition:.3s; background:#fff; }
-        .navbar-brand img{ height:58px; }
-        .navbar-nav .nav-link{ color:#222; font-size:17px; font-weight:500; margin:0 12px; position:relative; transition:.3s; }
-        .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active{ color:#0d6efd; }
-        .navbar-nav .nav-link::after{ content:""; position:absolute; left:0; bottom:-8px; width:0; height:2px; background:#0d6efd; transition:.3s; }
-        .navbar-nav .nav-link:hover::after, .navbar-nav .nav-link.active::after{ width:100%; }
-        .social-icons{ display:flex; gap:15px; }
-        .social-icons a{ width:44px; height:44px; border-radius:50%; border:1px solid #ddd; display:flex; justify-content:center; align-items:center; color:#111; text-decoration:none; transition:.3s; font-size:18px; }
-        .social-icons a:hover{ background:#0d6efd; color:#fff; border-color:#0d6efd; }
         .gallery-page{ padding:140px 0 90px; }
         .page-title{ font-size:42px; font-weight:700; color:#0f172a; margin-bottom:12px; }
         .page-text{ color:#64748b; max-width:700px; margin:0 auto 40px; }
@@ -31,33 +22,29 @@
         .gallery-card-body p{ color:#64748b; font-size:14px; margin:0; }
         .whatsapp{ position:fixed; right:25px; bottom:25px; width:65px; height:65px; background:#25D366; border-radius:50%; display:flex; justify-content:center; align-items:center; color:#fff; text-decoration:none; font-size:34px; z-index:999; box-shadow:0 10px 25px rgba(0,0,0,.3); transition:.3s; }
         .whatsapp:hover{ transform:scale(1.08); color:#fff; }
-        @media(max-width:992px){ .navbar{ padding:12px 0; } .navbar-collapse{ padding-top:20px; } .navbar-nav{ text-align:center; } .navbar-nav .nav-link{ margin:12px 0; } }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="home3.html">
+            <a class="navbar-brand fw-bold order-1" href="home3.html">
                 <img src="keysons_group.png" height="55" alt="Keysons Group">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+            <!-- Reusable Social Icons Component -->
+            <social-media-icons class="order-2 order-lg-3 ms-auto ms-lg-0 me-3 me-lg-0"></social-media-icons>
+            <button class="navbar-toggler order-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbar">
+            <div class="collapse navbar-collapse order-4 order-lg-2" id="navbar">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="home3.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="companies.html">Companies</a></li>
                     <li class="nav-item"><a class="nav-link" href="pharma.html">Pharma</a></li>
-                    <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="companies.html">Companies</a></li>
                     <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
-                <div class="social-icons d-none d-lg-flex">
-                    <a href="https://www.instagram.com/keysonsgroup/"><i class="bi bi-instagram"></i></a>
-                    <a href="#"><i class="bi bi-facebook"></i></a>
-                    <a href="#"><i class="bi bi-youtube"></i></a>
-                </div>
             </div>
         </div>
     </nav>
@@ -70,19 +57,21 @@
             </div>
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4">
-                    <div class="gallery-card">
-                        <a href="galaxy-image.html"><img src="9758861-european-pharma-days.jpg" alt="Pharmaceutical event">
-                        <div class="gallery-card-body"><h5>Pharma Event</h5><p>Networking and innovation at our industry gatherings.</p></div>
-                    </div>
-                </a>
+                    <a href="galaxy-image.html" class="text-decoration-none">
+                        <div class="gallery-card">
+                            <img src="9758861-european-pharma-days.jpg" alt="Pharmaceutical event">
+                            <div class="gallery-card-body"><h5>Pharma Event</h5><p>Networking and innovation at our industry gatherings.</p></div>
+                        </div>
+                    </a>
                 </div>
             
                 <div class="col-md-6 col-lg-4">
-                    <div class="gallery-card">
-                       <a href="galaxy-image.html"><img src="IT-BRAEING-2025-05-08T115429.593.jpg" alt="Team collaboration">
-                        <div class="gallery-card-body"><h5>Team Collaboration</h5><p>Dedicated teams working together to deliver quality.</p></div>
-                    </div>
-                </a>
+                    <a href="galaxy-image.html" class="text-decoration-none">
+                        <div class="gallery-card">
+                           <img src="IT-BRAEING-2025-05-08T115429.593.jpg" alt="Team collaboration">
+                            <div class="gallery-card-body"><h5>Team Collaboration</h5><p>Dedicated teams working together to deliver quality.</p></div>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="gallery-card">
@@ -117,5 +106,6 @@
     </a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/social-icons.js" defer></script>
 </body>
 </html>
