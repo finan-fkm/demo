@@ -463,9 +463,20 @@ font-size:13px;
 
 </section>
 
-    <a href="https://wa.me/9061504694" class="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Contact">
-        <i class="bi bi-whatsapp"></i>
-    </a>
+    <!-- Floating Action Buttons (Cart + WhatsApp Stack) -->
+    <div class="floating-actions" aria-label="Quick Actions">
+        <a href="cart.html" class="floating-btn floating-btn-cart" id="floating-cart-btn" role="button" aria-label="Shopping Cart" onclick="if(window.toggleCartDrawer){event.preventDefault();window.toggleCartDrawer();}">
+            <svg class="cart-floating-icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="8" cy="21" r="1"></circle>
+                <circle cx="19" cy="21" r="1"></circle>
+                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+            </svg>
+            <span class="cart-badge" id="cart-badge-count" style="display: none;">0</span>
+        </a>
+        <a href="https://wa.me/9061504694" class="floating-btn floating-btn-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/social-icons.js" defer></script>

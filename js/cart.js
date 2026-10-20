@@ -71,15 +71,40 @@ function saveCart() {
 function injectCartDOM() {
     // 1. Floating Cart Button (only if not already present)
     if (!document.getElementById("floating-cart-btn")) {
-        const floatBtn = document.createElement("div");
+        const floatBtn = document.createElement("a");
         floatBtn.id = "floating-cart-btn";
-        floatBtn.className = "floating-cart-btn";
-        floatBtn.setAttribute("onclick", "toggleCartDrawer()");
+        floatBtn.className = "floating-btn floating-btn-cart";
+        floatBtn.href = "cart.html";
+        floatBtn.setAttribute("role", "button");
+        floatBtn.setAttribute("aria-label", "Shopping Cart");
+        floatBtn.setAttribute("onclick", "if(window.toggleCartDrawer){event.preventDefault();window.toggleCartDrawer();}");
         floatBtn.innerHTML = `
-            <i class="bi bi-cart3"></i>
-            <span class="cart-badge" id="cart-badge-count">0</span>
+            <svg class="cart-floating-icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="8" cy="21" r="1"></circle>
+                <circle cx="19" cy="21" r="1"></circle>
+                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+            </svg>
+            <span class="cart-badge" id="cart-badge-count" style="display: none;">0</span>
         `;
-        document.body.appendChild(floatBtn);
+
+        const existingActions = document.querySelector(".floating-actions");
+        if (existingActions) {
+            existingActions.prepend(floatBtn);
+        } else {
+            const existingWa = document.querySelector(".whatsapp, .floating-btn-whatsapp");
+            if (existingWa) {
+                const wrapper = document.createElement("div");
+                wrapper.className = "floating-actions";
+                existingWa.parentNode.insertBefore(wrapper, existingWa);
+                wrapper.appendChild(floatBtn);
+                wrapper.appendChild(existingWa);
+            } else {
+                const wrapper = document.createElement("div");
+                wrapper.className = "floating-actions";
+                wrapper.appendChild(floatBtn);
+                document.body.appendChild(wrapper);
+            }
+        }
     }
 
     // 2. Success Toast container
