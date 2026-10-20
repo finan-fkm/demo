@@ -244,7 +244,33 @@ Gallery
     margin:0;
 }
 
+/*==========================
+WhatsApp
+==========================*/
 
+.whatsapp{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:65px;
+    height:65px;
+    background:#25D366;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    text-decoration:none;
+    font-size:34px;
+    z-index:999;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+    transition:.3s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.08);
+    color:#fff;
+}
 
 /*==========================
 Tablet
@@ -309,7 +335,13 @@ width:100%;
 font-size:32px;
 }
 
-
+.whatsapp{
+width:55px;
+height:55px;
+font-size:28px;
+right:15px;
+bottom:15px;
+}
 
 }
 
@@ -431,14 +463,8 @@ font-size:13px;
 
 </section>
 
-    <!-- Floating Shopping Cart Button -->
-    <a href="cart.html" id="floating-cart-btn" class="floating-cart-btn" role="button" aria-label="Shopping Cart" onclick="if(window.toggleCartDrawer){event.preventDefault();window.toggleCartDrawer();}">
-        <svg class="cart-floating-icon" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="8" cy="21" r="1"></circle>
-            <circle cx="19" cy="21" r="1"></circle>
-            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
-        </svg>
-        <span class="cart-badge" id="cart-badge-count" style="display: none;">0</span>
+    <a href="https://wa.me/9061504694" class="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Contact">
+        <i class="bi bi-whatsapp"></i>
     </a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

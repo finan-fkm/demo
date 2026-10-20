@@ -70,21 +70,14 @@ function saveCart() {
 // Inject Dynamic DOM Elements (Floating button, Drawer, Toast container)
 function injectCartDOM() {
     // 1. Floating Cart Button (only if not already present)
-    if (!document.getElementById("floating-cart-btn") && !document.querySelector(".floating-cart-btn")) {
-        const floatBtn = document.createElement("a");
+    if (!document.getElementById("floating-cart-btn")) {
+        const floatBtn = document.createElement("div");
         floatBtn.id = "floating-cart-btn";
         floatBtn.className = "floating-cart-btn";
-        floatBtn.href = "cart.html";
-        floatBtn.setAttribute("role", "button");
-        floatBtn.setAttribute("aria-label", "Shopping Cart");
-        floatBtn.setAttribute("onclick", "if(window.toggleCartDrawer){event.preventDefault();window.toggleCartDrawer();}");
+        floatBtn.setAttribute("onclick", "toggleCartDrawer()");
         floatBtn.innerHTML = `
-            <svg class="cart-floating-icon" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="8" cy="21" r="1"></circle>
-                <circle cx="19" cy="21" r="1"></circle>
-                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
-            </svg>
-            <span class="cart-badge" id="cart-badge-count" style="display: none;">0</span>
+            <i class="bi bi-cart3"></i>
+            <span class="cart-badge" id="cart-badge-count">0</span>
         `;
         document.body.appendChild(floatBtn);
     }

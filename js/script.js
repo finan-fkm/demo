@@ -29,29 +29,4 @@ document.addEventListener('DOMContentLoaded', function () {
       window.location.href = 'page2.html';
     });
   }
-
-  // Synchronize cart count badge across pages
-  try {
-    const storedCart = localStorage.getItem('pharmacy_cart');
-    if (storedCart) {
-      const items = JSON.parse(storedCart);
-      if (Array.isArray(items)) {
-        const totalCount = items.reduce(function (sum, item) {
-          return sum + (item.quantity || 1);
-        }, 0);
-        const floatBadge = document.getElementById('cart-badge-count');
-        if (floatBadge) {
-          floatBadge.textContent = totalCount;
-          floatBadge.style.display = totalCount > 0 ? 'flex' : 'none';
-        }
-        const navBadge = document.getElementById('nav-cart-badge');
-        if (navBadge) {
-          navBadge.textContent = totalCount;
-          navBadge.style.display = totalCount > 0 ? 'inline-block' : 'none';
-        }
-      }
-    }
-  } catch (err) {
-    // Storage error ignored
-  }
 });

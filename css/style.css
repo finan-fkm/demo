@@ -317,143 +317,41 @@ social-media-icons .social-icons a:hover {
   transform: translateZ(0); /* Promotes to GPU compositor */
 }
 
-/*=============================================================
-   PREMIUM FLOATING SHOPPING CART BUTTON
-   (Replaces WhatsApp with dark navy/black circular cart button)
-=============================================================*/
-.floating-cart-btn {
+/* Hardware-accelerated floating action buttons */
+.whatsapp {
   position: fixed;
-  right: 30px;
-  bottom: 30px;
-  width: 160px;
-  height: 160px;
-  background: #0b111e;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff !important;
-  text-decoration: none;
-  z-index: 9999;
-  box-shadow: 0 12px 36px rgba(11, 17, 30, 0.4), 0 4px 12px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, box-shadow 0.28s ease;
-  transform: translateZ(0);
-  -webkit-tap-highlight-color: transparent;
-}
-
-.floating-cart-btn:hover {
-  background: #1e293b;
-  transform: scale(1.04) translateY(-3px);
-  box-shadow: 0 18px 46px rgba(11, 17, 30, 0.5), 0 6px 16px rgba(0, 0, 0, 0.3);
-  color: #ffffff !important;
-}
-
-.floating-cart-btn:active {
-  transform: scale(0.98) translateY(0);
-}
-
-.floating-cart-btn .cart-floating-icon {
+  right: 25px;
+  bottom: 25px;
   width: 60px;
   height: 60px;
-  stroke: #ffffff;
-  stroke-width: 1.8;
-  display: block;
-  transition: transform 0.25s ease;
-}
-
-.floating-cart-btn:hover .cart-floating-icon {
-  transform: scale(1.06);
-}
-
-.floating-cart-btn .cart-badge {
-  position: absolute;
-  top: 22px;
-  right: 22px;
-  background: #ef4444;
-  color: #ffffff;
-  font-size: 13px;
-  font-weight: 700;
-  min-width: 26px;
-  height: 26px;
-  padding: 0 6px;
-  border-radius: 999px;
+  background: #25D366;
+  border-radius: 50%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  border: 2px solid #0b111e;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  pointer-events: none;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 30px;
+  z-index: 999;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+  transform: translateZ(0);
 }
 
-/* Tablet screen responsiveness */
-@media (max-width: 992px) {
-  .floating-cart-btn {
-    width: 110px;
-    height: 110px;
-    right: 24px;
-    bottom: 24px;
-  }
-  .floating-cart-btn .cart-floating-icon {
-    width: 42px;
-    height: 42px;
-  }
-  .floating-cart-btn .cart-badge {
-    top: 14px;
-    right: 14px;
-    min-width: 22px;
-    height: 22px;
-    font-size: 11px;
-  }
+.whatsapp:hover {
+  transform: scale(1.08) translateY(-2px);
+  color: #fff;
+  box-shadow: 0 14px 30px rgba(37, 211, 102, 0.35);
 }
 
-/* Mobile screen responsiveness */
 @media (max-width: 768px) {
-  .floating-cart-btn {
-    width: 72px;
-    height: 72px;
+  .whatsapp {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
     right: 18px;
     bottom: 18px;
-    box-shadow: 0 8px 24px rgba(11, 17, 30, 0.35);
   }
-  .floating-cart-btn .cart-floating-icon {
-    width: 30px;
-    height: 30px;
-  }
-  .floating-cart-btn .cart-badge {
-    top: 6px;
-    right: 6px;
-    min-width: 20px;
-    height: 20px;
-    font-size: 10px;
-  }
-}
-
-/* Small mobile responsiveness */
-@media (max-width: 480px) {
-  .floating-cart-btn {
-    width: 60px;
-    height: 60px;
-    right: 14px;
-    bottom: 14px;
-  }
-  .floating-cart-btn .cart-floating-icon {
-    width: 26px;
-    height: 26px;
-  }
-  .floating-cart-btn .cart-badge {
-    top: 4px;
-    right: 4px;
-    min-width: 18px;
-    height: 18px;
-    font-size: 9px;
-  }
-}
-
-/* Legacy fallback mapping to ensure no green button or WhatsApp branding appears */
-.whatsapp {
-  display: none !important;
 }
 
 /*=============================================================
