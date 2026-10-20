@@ -131,27 +131,30 @@ function injectCartDOM() {
         document.body.appendChild(drawer);
     }
 
-    // 4. Inject Cart to Nav Link (if navbar is present)
-    const navList = document.querySelector(".navbar-nav");
-    if (navList && !document.querySelector(".nav-link-cart")) {
-        const li = document.createElement("li");
-        li.className = "nav-item";
-        li.innerHTML = `
-            <a class="nav-link nav-link-cart" href="cart.html">
-                <i class="bi bi-cart3"></i> Cart 
-                <span class="badge bg-danger rounded-pill nav-cart-badge" id="nav-cart-badge" style="font-size: 10px; display: none;">0</span>
-            </a>
-        `;
-        navList.appendChild(li);
-
-        // Set active state on nav link
-        if (window.location.pathname.includes("cart.html")) {
-            // Remove active from others
-            document.querySelectorAll(".navbar-nav .nav-link").forEach(link => {
-                link.classList.remove("active");
-            });
-            li.querySelector(".nav-link").classList.add("active");
+    // 4. Update or Inject Cart to Nav Link (if navbar is present)
+    const existingCartLink = document.querySelector(".nav-link-cart");
+    if (!existingCartLink) {
+        const navList = document.querySelector(".navbar-nav");
+        if (navList) {
+            const li = document.createElement("li");
+            li.className = "nav-item";
+            li.innerHTML = `
+                <a class="nav-link nav-link-cart" href="cart.html">
+                    <i class="bi bi-cart3"></i> Cart 
+                    <span class="badge bg-danger rounded-pill nav-cart-badge" id="nav-cart-badge" style="font-size: 11px; display: none;">0</span>
+                </a>
+            `;
+            navList.appendChild(li);
         }
+    }
+
+    // Set active state on cart nav link if on cart page
+    if (window.location.pathname.includes("cart.html")) {
+        document.querySelectorAll(".navbar-nav .nav-link").forEach(link => {
+            link.classList.remove("active");
+        });
+        const cartLink = document.querySelector(".nav-link-cart");
+        if (cartLink) cartLink.classList.add("active");
     }
 }
 

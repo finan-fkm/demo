@@ -376,102 +376,86 @@ font-size:13px;
 
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
-
+    <!-- Unified Standardized Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
         <div class="container">
-
-            <!-- Logo -->
-            <a class="navbar-brand fw-bold" href="#">
-                <img src="keysons_group.png" height="55" alt="">
+            <!-- Brand Logo -->
+            <a class="navbar-brand" href="home3.html" aria-label="Keysons Group Home">
+                <img src="keysons_group.png" alt="Keysons Group" width="160" height="48">
             </a>
 
-            <!-- Mobile Toggle -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbar">
+            <!-- Social Media Icons (Reusable Component) -->
+            <social-media-icons class="order-lg-3 ms-auto ms-lg-0 me-2 me-lg-0"></social-media-icons>
 
+            <!-- Mobile Hamburger Toggle -->
+            <button class="navbar-toggler order-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-
             </button>
 
-            <div class="collapse navbar-collapse" id="navbar">
-
+            <!-- Navigation Menu -->
+            <div class="collapse navbar-collapse order-lg-2" id="navbarMain">
                 <ul class="navbar-nav mx-auto">
-
                     <li class="nav-item">
                         <a class="nav-link" href="home3.html">Home</a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link" href="companies.html">Companies</a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link active" href="gallery.html">Gallery</a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link" href="product.html">Products</a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-cart" href="cart.html" id="nav-cart-link">
+                            <i class="bi bi-cart3"></i> Cart
+                            <span class="badge bg-danger rounded-pill nav-cart-badge" id="nav-cart-badge" style="display: none;">0</span>
+                        </a>
+                    </li>
                 </ul>
-
-                <div class="social-icons d-none d-lg-flex">
-
-                    <a href="https://www.instagram.com/keysonsgroup/"><i class="bi bi-instagram"></i></a>
-
-                    <a href="#"><i class="bi bi-facebook"></i></a>
-
-                    <a href="#"><i class="bi bi-youtube"></i></a>
-
-                </div>
-
             </div>
-
         </div>
-
     </nav>
 
-<section class="slider" style="padding-top: 80px;">
+<section class="slider page-top-offset">
 
 <div class="container1">
 
 <div class="slide active">
-<img src="pharma.png">
+<img src="pharma.png" alt="Pharma" loading="lazy" decoding="async">
 </div>
 <div class="slide">
-<img src="trading.png">
-</div>
-
-<div class="slide">
-<img src="mandco.png">
+<img src="trading.png" alt="Trading" loading="lazy" decoding="async">
 </div>
 
 <div class="slide">
-<img src="images/img4.jpg">
+<img src="mandco.png" alt="M and Co" loading="lazy" decoding="async">
 </div>
 
 <div class="slide">
-<img src="images/img5.jpg">
+<img src="enterprises.png" alt="Enterprises" loading="lazy" decoding="async">
+</div>
+
+<div class="slide">
+<img src="656670.jpg" alt="Facility" loading="lazy" decoding="async">
 </div>
 
 </div>
 
 <div class="buttons">
 
-<button id="prev">
+<button id="prev" aria-label="Previous Slide">
 <i class="fa-solid fa-arrow-left"></i>
 </button>
 
-<button id="next">
+<button id="next" aria-label="Next Slide">
 <i class="fa-solid fa-arrow-right"></i>
 </button>
 
@@ -479,17 +463,14 @@ font-size:13px;
 
 </section>
 
-
-    <a href=" https://wa.me/9061504694" class="whatsapp">
-
+    <a href="https://wa.me/9061504694" class="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Contact">
         <i class="bi bi-whatsapp"></i>
-
     </a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="js/social-icons.js" defer></script>
+    <script src="js/script.js"></script>
     <script src="image.js"></script>
-
 </body>
 
 </html>

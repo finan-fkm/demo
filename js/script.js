@@ -1,18 +1,32 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // Basic page enhancement for GitHub Pages deployment
+  // Prevent jumping on empty hash links
   document.querySelectorAll('a[href="#"]').forEach(function (link) {
     link.addEventListener('click', function (e) {
       e.preventDefault();
     });
   });
 
-  const navLinks = document.querySelectorAll('.nav-link');
-  navLinks.forEach(function (link) {
-    link.addEventListener('click', function () {
-      navLinks.forEach(function (item) {
-        item.classList.remove('active');
+  // Mobile Navbar Auto-Close on link click
+  const navCollapse = document.getElementById('navbarMain') || document.getElementById('navbar');
+  if (navCollapse) {
+    const navLinks = navCollapse.querySelectorAll('.nav-link');
+    navLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (window.innerWidth < 992 && navCollapse.classList.contains('show')) {
+          const bsCollapse = bootstrap.Collapse.getInstance(navCollapse);
+          if (bsCollapse) {
+            bsCollapse.hide();
+          }
+        }
       });
-      link.classList.add('active');
     });
-  });
+  }
+
+  // Next page navigation helper if present
+  const nextBtn = document.querySelector('.next-btn');
+  if (nextBtn) {
+    nextBtn.addEventListener('click', function () {
+      window.location.href = 'page2.html';
+    });
+  }
 });
