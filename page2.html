@@ -1,245 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Health Products - Page 2</title>
 
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="page.css">
 
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="page.css">
+    <!-- Product card styles are now loaded globally from css/product-card.css -->
 </head>
+
 <body>
 
-<section class="products py-5">
-
-<div class="container">
-
-<div class="row g-4">
-
-<!-- Product 9 -->
-
-<div class="col-lg-3 col-md-4 col-sm-6">
-
-<div class="product-card">
-
-<div class="image-box">
-<img src="images/product9.png" class="img-fluid">
-</div>
-
-<h5>Energy Boost Capsules</h5>
-
-<div class="price-row">
-
-<span class="price">$8.50 USD</span>
-
-<span class="capsules">60 Capsules</span>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- Product 10 -->
-
-<div class="col-lg-3 col-md-4 col-sm-6">
-
-<div class="product-card">
-
-<span class="badge-sale">Save 15%</span>
-
-<div class="image-box">
-<img src="images/product10.png" class="img-fluid">
-</div>
-
-<h5>Calcium Plus Tablets</h5>
-
-<div class="price-row">
-
-<div>
-
-<span class="price">$5.90 USD</span>
-
-<span class="old-price">$6.90 USD</span>
-
-</div>
-
-<span class="capsules">90 Capsules</span>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- Product 11 -->
-
-<div class="col-lg-3 col-md-4 col-sm-6">
-
-<div class="product-card">
-
-<div class="image-box">
-<img src="images/product11.png" class="img-fluid">
-</div>
-
-<h5>Omega Fish Oil</h5>
-
-<div class="price-row">
-
-<span class="price">$9.50 USD</span>
-
-<span class="capsules">120 Capsules</span>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- Product 12 -->
-
-<div class="col-lg-3 col-md-4 col-sm-6">
-
-<div class="product-card">
-
-<div class="image-box">
-<img src="images/product12.png" class="img-fluid">
-</div>
-
-<h5>Vitamin C Gummies</h5>
-
-<div class="price-row">
-
-<span class="price">$6.20 USD</span>
-
-<span class="capsules">50 Gummies</span>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- Product 13 -->
-
-<div class="col-lg-3 col-md-4 col-sm-6">
-
-<div class="product-card">
-
-<div class="image-box">
-<img src="images/product13.png" class="img-fluid">
-</div>
-
-<h5>Zinc Immunity Tablets</h5>
-
-<div class="price-row">
-
-<span class="price">$7.90 USD</span>
-
-<span class="capsules">70 Capsules</span>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- Product 14 -->
-
-<div class="col-lg-3 col-md-4 col-sm-6">
-
-<div class="product-card">
-
-<div class="image-box">
-<img src="images/product14.png" class="img-fluid">
-</div>
-
-<h5>Vitamin D3 Tablets</h5>
-
-<div class="price-row">
-
-<span class="price">$4.80 USD</span>
-
-<span class="capsules">90 Tablets</span>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- Product 15 -->
-
-<div class="col-lg-3 col-md-4 col-sm-6">
-
-<div class="product-card">
-
-<div class="image-box">
-<img src="images/product15.png" class="img-fluid">
-</div>
-
-<h5>Joint Care Capsules</h5>
-
-<div class="price-row">
-
-<span class="price">$11.00 USD</span>
-
-<span class="capsules">60 Capsules</span>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- Product 16 -->
-
-<div class="col-lg-3 col-md-4 col-sm-6">
-
-<div class="product-card">
-
-<span class="badge-sale">Save 20%</span>
-
-<div class="image-box">
-<img src="images/product16.png" class="img-fluid">
-</div>
-
-<h5>Daily Multivitamin</h5>
-
-<div class="price-row">
-
-<div>
-
-<span class="price">$8.00 USD</span>
-
-<span class="old-price">$10.00 USD</span>
-
-</div>
-
-<span class="capsules">100 Tablets</span>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="pagination-box mt-5">
-
-<button class="next-btn" onclick="window.location.href='pharma product.html'">
-← Previous
-</button>
-
-<span>2 / 2</span>
-
-</div>
-
-</div>
-
-</section>
-
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand fw-bold order-1" href="home3.html">
+                <img src="keysons_group.png" height="55" alt="Keysons Group">
+            </a>
+
+            <!-- Reusable Social Icons Component -->
+            <social-media-icons class="order-2 order-lg-3 ms-auto ms-lg-0 me-3 me-lg-0"></social-media-icons>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler order-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse order-4 order-lg-2" id="navbar">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home3.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pharma.html">Pharma</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="companies.html">Companies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="product.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="products py-5 mt-5">
+        <div class="container">
+            <div style="padding-top: 5%;">
+                <div class="row g-4">
+
+                    <!-- Product 9 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <product-card
+                            name="Energy Boost Capsules"
+                            price="$8.50 USD"
+                            capsules="60 Capsules"
+                            image="images/product9.png">
+                        </product-card>
+                    </div>
+
+                    <!-- Product 10 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <product-card
+                            name="Calcium Plus Tablets"
+                            price="$5.90 USD"
+                            old-price="$6.90 USD"
+                            sale-badge="Save 15%"
+                            capsules="90 Capsules"
+                            image="images/product10.png">
+                        </product-card>
+                    </div>
+
+                    <!-- Product 11 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <product-card
+                            name="Omega Fish Oil"
+                            price="$9.50 USD"
+                            capsules="120 Capsules"
+                            image="images/product11.png">
+                        </product-card>
+                    </div>
+
+                    <!-- Product 12 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <product-card
+                            name="Vitamin C Gummies"
+                            price="$6.20 USD"
+                            capsules="50 Gummies"
+                            image="images/product12.png">
+                        </product-card>
+                    </div>
+
+                    <!-- Product 13 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <product-card
+                            name="Zinc Immunity Tablets"
+                            price="$7.90 USD"
+                            capsules="70 Capsules"
+                            image="images/product13.png">
+                        </product-card>
+                    </div>
+
+                    <!-- Product 14 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <product-card
+                            name="Vitamin D3 Tablets"
+                            price="$4.80 USD"
+                            capsules="90 Tablets"
+                            image="images/product14.png">
+                        </product-card>
+                    </div>
+
+                    <!-- Product 15 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <product-card
+                            name="Joint Care Capsules"
+                            price="$11.00 USD"
+                            capsules="60 Capsules"
+                            image="images/product15.png">
+                        </product-card>
+                    </div>
+
+                    <!-- Product 16 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <product-card
+                            name="Daily Multivitamin"
+                            price="$8.00 USD"
+                            old-price="$10.00 USD"
+                            sale-badge="Save 20%"
+                            capsules="100 Tablets"
+                            image="images/product16.png">
+                        </product-card>
+                    </div>
+
+                </div>
+
+                <div class="pagination-box mt-5">
+                    <button class="next-btn" onclick="window.location.href='pharma product.html'">
+                        &larr; Previous
+                    </button>
+                    <span>2 / 2</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/social-icons.js" defer></script>
+    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

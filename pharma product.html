@@ -11,544 +11,376 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- Google Font -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
-<style>
-    /*==========================
+    <style>
+        /*==========================
   Google Font
 ==========================*/
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-html{
-    scroll-behavior:smooth;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-body{
-    font-family:'Poppins',sans-serif;
-    overflow-x:hidden;
-}
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
 
-/*==========================
+        /*==========================
 Hero
 ==========================*/
 
-.hero{
-    position:relative;
-    min-height:100vh;
-    background:url("../images/hero.jpg") center center/cover no-repeat;
-    display:flex;
-    align-items:center;
-}
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            background: url("../images/hero.jpg") center center/cover no-repeat;
+            display: flex;
+            align-items: center;
+        }
 
-.overlay{
-    position:absolute;
-    inset:0;
-    background:rgba(0,25,60,.72);
-}
+        .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 25, 60, .72);
+        }
 
-.hero .container{
-    position:relative;
-    z-index:2;
-}
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
 
-.hero-small{
-    color:#1f8cff;
-    font-size:18px;
-    font-weight:600;
-    letter-spacing:3px;
-    display:inline-block;
-    border-bottom:2px solid #1f8cff;
-    padding-bottom:8px;
-    margin-bottom:30px;
-}
+        .hero-small {
+            color: #1f8cff;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            display: inline-block;
+            border-bottom: 2px solid #1f8cff;
+            padding-bottom: 8px;
+            margin-bottom: 30px;
+        }
 
-.hero h1{
-    color:#fff;
-    font-size:78px;
-    font-weight:800;
-    line-height:1.1;
-}
+        .hero h1 {
+            color: #fff;
+            font-size: 78px;
+            font-weight: 800;
+            line-height: 1.1;
+        }
 
-.hero h1 span{
-    color:#0d6efd;
-}
+        .hero h1 span {
+            color: #0d6efd;
+        }
 
-.hero p{
-    color:#d7d7d7;
-    font-size:24px;
-    line-height:1.8;
-    margin:35px 0;
-    max-width:760px;
-}
+        .hero p {
+            color: #d7d7d7;
+            font-size: 24px;
+            line-height: 1.8;
+            margin: 35px 0;
+            max-width: 760px;
+        }
 
-.hero-buttons{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
-}
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
 
-.hero-buttons .btn{
-    padding:16px 36px;
-    border-radius:6px;
-    font-size:18px;
-    font-weight:600;
-}
+        .hero-buttons .btn {
+            padding: 16px 36px;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: 600;
+        }
 
-.btn-primary{
-    background:#0d6efd;
-    border:none;
-}
+        .btn-primary {
+            background: #0d6efd;
+            border: none;
+        }
 
-.btn-primary:hover{
-    background:#0b5ed7;
-}
+        .btn-primary:hover {
+            background: #0b5ed7;
+        }
 
-.btn-outline-light:hover{
-    color:#000;
-}
+        .btn-outline-light:hover {
+            color: #000;
+        }
 
-/*==========================
+        /*==========================
 Scroll
 ==========================*/
 
-.scroll-text{
-    position:absolute;
-    left:50%;
-    bottom:25px;
-    transform:translateX(-50%);
-    color:#fff;
-    text-align:center;
-    letter-spacing:3px;
-    font-size:14px;
-    z-index:5;
-}
+        .scroll-text {
+            position: absolute;
+            left: 50%;
+            bottom: 25px;
+            transform: translateX(-50%);
+            color: #fff;
+            text-align: center;
+            letter-spacing: 3px;
+            font-size: 14px;
+            z-index: 5;
+        }
 
-.scroll-text .line{
-    width:2px;
-    height:55px;
-    background:#fff;
-    margin:12px auto 0;
-    animation:scrollLine 1.8s infinite;
-}
+        .scroll-text .line {
+            width: 2px;
+            height: 55px;
+            background: #fff;
+            margin: 12px auto 0;
+            animation: scrollLine 1.8s infinite;
+        }
 
-@keyframes scrollLine{
+        @keyframes scrollLine {
 
-0%{
-height:15px;
-opacity:.3;
-}
+            0% {
+                height: 15px;
+                opacity: .3;
+            }
 
-50%{
-height:55px;
-opacity:1;
-}
+            50% {
+                height: 55px;
+                opacity: 1;
+            }
 
-100%{
-height:15px;
-opacity:.3;
-}
+            100% {
+                height: 15px;
+                opacity: .3;
+            }
 
-}
+        }
 
-/*==========================
+        /*==========================
 About
 ==========================*/
 
-#about{
-    padding:100px 0;
-}
+        #about {
+            padding: 100px 0;
+        }
 
-#about h2{
-    font-size:42px;
-    font-weight:700;
-    margin-bottom:20px;
-}
+        #about h2 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
 
-#about p{
-    color:#666;
-    font-size:18px;
-    line-height:1.9;
-}
+        #about p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.9;
+        }
 
-/*==========================
+        /*==========================
 WhatsApp
 ==========================*/
 
-.whatsapp{
-    position:fixed;
-    right:25px;
-    bottom:25px;
-    width:65px;
-    height:65px;
-    background:#25D366;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:#fff;
-    text-decoration:none;
-    font-size:34px;
-    z-index:999;
-    box-shadow:0 10px 25px rgba(0,0,0,.3);
-    transition:.3s;
-}
+        .whatsapp {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            width: 65px;
+            height: 65px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-decoration: none;
+            font-size: 34px;
+            z-index: 999;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .3);
+            transition: .3s;
+        }
 
-.whatsapp:hover{
-    transform:scale(1.08);
-    color:#fff;
-}
+        .whatsapp:hover {
+            transform: scale(1.08);
+            color: #fff;
+        }
 
-/*==========================
+        /*==========================
 Tablet
 ==========================*/
 
-@media(max-width:992px){
+        @media(max-width:992px) {
 
-.hero{
-text-align:center;
-}
+            .hero {
+                text-align: center;
+            }
 
-.hero h1{
-font-size:55px;
-}
+            .hero h1 {
+                font-size: 55px;
+            }
 
-.hero p{
-font-size:20px;
-}
+            .hero p {
+                font-size: 20px;
+            }
 
-.hero-buttons{
-justify-content:center;
-}
+            .hero-buttons {
+                justify-content: center;
+            }
 
-.scroll-text{
-display:none;
-}
+            .scroll-text {
+                display: none;
+            }
 
-}
+        }
 
-/*==========================
+        /*==========================
 Mobile
 ==========================*/
 
-@media(max-width:768px){
+        @media(max-width:768px) {
 
-.hero{
-padding-top:100px;
-}
+            .hero {
+                padding-top: 100px;
+            }
 
-.hero-small{
-font-size:14px;
-}
+            .hero-small {
+                font-size: 14px;
+            }
 
-.hero h1{
-font-size:42px;
-}
+            .hero h1 {
+                font-size: 42px;
+            }
 
-.hero p{
-font-size:18px;
-line-height:1.7;
-}
+            .hero p {
+                font-size: 18px;
+                line-height: 1.7;
+            }
 
-.hero-buttons .btn{
-width:100%;
-}
+            .hero-buttons .btn {
+                width: 100%;
+            }
 
-#about h2{
-font-size:32px;
-}
+            #about h2 {
+                font-size: 32px;
+            }
 
-.whatsapp{
-width:55px;
-height:55px;
-font-size:28px;
-right:15px;
-bottom:15px;
-}
+            .whatsapp {
+                width: 55px;
+                height: 55px;
+                font-size: 28px;
+                right: 15px;
+                bottom: 15px;
+            }
 
-}
+        }
 
-/*==========================
+        /*==========================
 Small Mobile
 ==========================*/
 
-@media(max-width:480px){
+        @media(max-width:480px) {
 
-.hero h1{
-font-size:34px;
-}
+            .hero h1 {
+                font-size: 34px;
+            }
 
-.hero p{
-font-size:16px;
-}
+            .hero p {
+                font-size: 16px;
+            }
 
-.hero-small{
-letter-spacing:2px;
-font-size:13px;
-}
+            .hero-small {
+                letter-spacing: 2px;
+                font-size: 13px;
+            }
 
-}
- .banner{
-      width: 100%;
-      height: 100%;
-      background-image: url(656670.jpg);
-      background-size:cover ;
-    }
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Inter',sans-serif;
-}
+        .banner {
+            width: 100%;
+            height: 100%;
+            background-image: url(656670.jpg);
+            background-size: cover;
+        }
 
-body{
-    background:#f8f8f8;
-}
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-.products{
-    padding:70px 0;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
 
-.product-card{
-    position:relative;
-    background:#fff;
-    border-radius:16px;
-    padding:15px;
-    transition:.35s;
-    height:100%;
-}
+        body {
+            background: #f8f8f8;
+        }
 
-.product-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 12px 30px rgba(0,0,0,.12);
-}
+        .products {
+            padding: 70px 0;
+        }
 
-.image-box{
-    background:#f5f5f5;
-    border-radius:14px;
-    height:250px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    overflow:hidden;
-    margin-bottom:18px;
-}
+        /* Product card styling is now loaded globally from css/product-card.css */
 
-.image-box img{
-    width:140px;
-    transition:.4s;
-}
+        .pagination-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 60px;
+        }
 
-.product-card:hover .image-box img{
-    transform:scale(1.08);
-}
+        .pagination-box span {
+            font-weight: 600;
+            color: #666;
+        }
 
-.badge-sale{
-    position:absolute;
-    top:18px;
-    right:18px;
-    background:#d9ff29;
-    color:#000;
-    font-size:12px;
-    font-weight:700;
-    padding:5px 10px;
-    border-radius:4px;
-}
+        .next-btn {
+            border: none;
+            background: #d9ff29;
+            padding: 14px 50px;
+            border-radius: 30px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: .3s;
+        }
 
-.product-card h5{
-    font-size:16px;
-    font-weight:600;
-    color:#333;
-    line-height:24px;
-    min-height:50px;
-    margin-bottom:15px;
-}
+        .next-btn:hover {
+            background: #c8ef18;
+            transform: translateY(-2px);
+        }
 
-.price-row{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-end;
-    gap:10px;
-}
+        .next-btn i {
+            margin-left: 8px;
+        }
 
-.price{
-    font-weight:700;
-    color:#222;
-    font-size:15px;
-}
+        /* Large Tablet */
+        @media(max-width:992px) {
+        }
 
-.old-price{
-    margin-left:6px;
-    color:#9c9c9c;
-    text-decoration:line-through;
-    font-size:13px;
-}
+        /* Tablet */
+        @media(max-width:768px) {
+            .pagination-box {
+                flex-direction: column;
+                gap: 20px;
+            }
 
-.capsules{
-    color:#777;
-    font-size:13px;
-    white-space:nowrap;
-}
+            .next-btn {
+                width: 100%;
+            }
+        }
 
-.buy-btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    width:100%;
-    margin-top:14px;
-    padding:10px 12px;
-    border-radius:10px;
-    background:#25D366;
-    color:#fff;
-    text-decoration:none;
-    font-size:14px;
-    font-weight:600;
-    transition:.3s;
-}
+        /* Mobile */
+        @media(max-width:576px) {
+            .products {
+                padding: 50px 0;
+            }
 
-.buy-btn:hover{
-    background:#1da851;
-    color:#fff;
-}
-
-.pagination-box{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-top:60px;
-}
-
-.pagination-box span{
-    font-weight:600;
-    color:#666;
-}
-
-.next-btn{
-    border:none;
-    background:#d9ff29;
-    padding:14px 50px;
-    border-radius:30px;
-    font-weight:700;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.next-btn:hover{
-    background:#c8ef18;
-    transform:translateY(-2px);
-}
-
-.next-btn i{
-    margin-left:8px;
-}
-
-/* Large Tablet */
-@media(max-width:992px){
-
-.image-box{
-    height:220px;
-}
-
-.image-box img{
-    width:120px;
-}
-
-}
-
-/* Tablet */
-@media(max-width:768px){
-
-.product-card{
-    margin-bottom:20px;
-}
-
-.image-box{
-    height:200px;
-}
-
-.image-box img{
-    width:110px;
-}
-
-.product-card h5{
-    font-size:15px;
-}
-
-.price-row{
-    flex-direction:column;
-    align-items:flex-start;
-}
-
-.pagination-box{
-    flex-direction:column;
-    gap:20px;
-}
-
-.next-btn{
-    width:100%;
-}
-
-}
-
-/* Mobile */
-@media(max-width:576px){
-
-.products{
-    padding:50px 0;
-}
-
-.image-box{
-    height:180px;
-}
-
-.image-box img{
-    width:90px;
-}
-
-.product-card{
-    padding:12px;
-}
-
-.product-card h5{
-    font-size:14px;
-    line-height:22px;
-}
-
-.price{
-    font-size:14px;
-}
-
-.old-price{
-    font-size:12px;
-}
-
-.capsules{
-    font-size:12px;
-}
-
-.badge-sale{
-    font-size:10px;
-    padding:4px 8px;
-}
-
-.next-btn{
-    padding:12px 30px;
-}
-
-}
-</style>
+            .next-btn {
+                padding: 12px 30px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -567,8 +399,8 @@ body{
             <social-media-icons class="order-2 order-lg-3 ms-auto ms-lg-0 me-3 me-lg-0"></social-media-icons>
 
             <!-- Mobile Toggle -->
-            <button class="navbar-toggler order-3" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler order-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
 
                 <span class="navbar-toggler-icon"></span>
 
@@ -584,10 +416,6 @@ body{
 
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="pharma.html">Pharma</a>
                     </li>
 
                     <li class="nav-item">
@@ -614,200 +442,116 @@ body{
 
     </nav>
     <section class="products py-5">
-    <div class="container">
-        <div style="padding-top: 10%;">
-        <div class="row g-4">
+        <div class="container">
+            <div style="padding-top: 10%;">
+                <div class="row g-4">
 
-            <!-- Product 1 -->
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="product-card">
-                    <div class="image-box">
-                        <img src="TLF3WPWNKBL25PYXC7OS6IVIEM.avif" class="img-fluid" alt="" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                
-                    <h5>Scalpcare Biotin Tablets</h5>
-
-                    <div class="price-row">
-                        <span class="price">$5.00 USD</span>
-                        <span class="capsules">60 Capsules</span>
+                    <!-- Product 1 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <product-card
+                            name="Scalpcare Biotin Tablets"
+                            price="$5.00 USD"
+                            capsules="60 Capsules"
+                            image="TLF3WPWNKBL25PYXC7OS6IVIEM.avif">
+                        </product-card>
                     </div>
 
-                    <a class="buy-btn" href="#" data-product="Scalpcare Biotin Tablets" data-price="$5.00 USD" data-pack="60 Capsules">Buy on WhatsApp</a>
+                    <!-- Product 2 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <product-card
+                            name="Optigut Probiotic Blend Tablets"
+                            price="$3.90 USD"
+                            capsules="50 Capsules"
+                            image="pharma.png">
+                        </product-card>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <product-card
+                            name="Gutbalance Prebiotic Tablets"
+                            price="$4.90 USD"
+                            old-price="$5.50 USD"
+                            sale-badge="Save 5%"
+                            capsules="40 Capsules"
+                            image="images/product3.png">
+                        </product-card>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <product-card
+                            name="Vitality Boost Hair Tablets"
+                            price="$6.00 USD"
+                            capsules="80 Capsules"
+                            image="images/product4.png">
+                        </product-card>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <product-card
+                            name="Agedefy Retinol Tablets"
+                            price="$2.90 USD"
+                            old-price="$4.50 USD"
+                            sale-badge="Save 5%"
+                            capsules="30 Capsules"
+                            image="images/product5.png">
+                        </product-card>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <product-card
+                            name="Immunity Elite Herbal Tablets"
+                            price="$4.90 USD"
+                            capsules="45 Capsules"
+                            image="images/product6.png">
+                        </product-card>
+                    </div>
+
+                    <!-- Product 7 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <product-card
+                            name="Harmony Biotic Digestive Tablets"
+                            price="$9.00 USD"
+                            capsules="70 Capsules"
+                            image="images/product7.png">
+                        </product-card>
+                    </div>
+
+                    <!-- Product 8 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <product-card
+                            name="Scalp Replenish Hair Tablets"
+                            price="$7.00 USD"
+                            old-price="$9.90 USD"
+                            sale-badge="Save 10%"
+                            capsules="80 Capsules"
+                            image="images/product8.png">
+                        </product-card>
+                    </div>
+
+                </div>
+
+                <div class="pagination-box mt-5">
+                    <span>1 / 2</span>
+
+                    <button class="next-btn">
+                        Next <i class="fa-solid fa-arrow-right"></i>
+                    </button>
                 </div>
             </div>
-
-            <!-- Product 2 -->
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="product-card">
-                    <div class="image-box">
-                        <img src="pharma.png" class="img-fluid" alt="" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-
-                    <h5>Optigut Probiotic Blend Tablets</h5>
-
-                    <div class="price-row">
-                        <span class="price">$3.90 USD</span>
-                        <span class="capsules">50 Capsules</span>
-                    </div>
-
-                    <a class="buy-btn" href="#" data-product="Optigut Probiotic Blend Tablets" data-price="$3.90 USD" data-pack="50 Capsules">Buy on WhatsApp</a>
-                </div>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="product-card">
-                    <span class="badge-sale">Save 5%</span>
-
-                    <div class="image-box">
-                        <img src="images/product3.png" class="img-fluid" alt="">
-                    </div>
-
-                    <h5>Gutbalance Prebiotic Tablets</h5>
-
-                    <div class="price-row">
-                        <div>
-                            <span class="price">$4.90 USD</span>
-                            <span class="old-price">$5.50 USD</span>
-                        </div>
-
-                        <span class="capsules">40 Capsules</span>
-                    </div>
-
-                    <a class="buy-btn" href="#" data-product="Gutbalance Prebiotic Tablets" data-price="$4.90 USD" data-pack="40 Capsules">Buy on WhatsApp</a>
-                </div>
-            </div>
-
-            <!-- Product 4 -->
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="product-card">
-                    <div class="image-box">
-                        <img src="images/product4.png" class="img-fluid" alt="">
-                    </div>
-
-                    <h5>Vitality Boost Hair Tablets</h5>
-
-                    <div class="price-row">
-                        <span class="price">$6.00 USD</span>
-                        <span class="capsules">80 Capsules</span>
-                    </div>
-
-                    <a class="buy-btn" href="#" data-product="Vitality Boost Hair Tablets" data-price="$6.00 USD" data-pack="80 Capsules">Buy on WhatsApp</a>
-                </div>
-            </div>
-
-            <!-- Product 5 -->
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="product-card">
-                    <span class="badge-sale">Save 5%</span>
-
-                    <div class="image-box">
-                        <img src="images/product5.png" class="img-fluid" alt="">
-                    </div>
-
-                    <h5>Agedefy Retinol Tablets</h5>
-
-                    <div class="price-row">
-                        <div>
-                            <span class="price">$2.90 USD</span>
-                            <span class="old-price">$4.50 USD</span>
-                        </div>
-
-                        <span class="capsules">30 Capsules</span>
-                    </div>
-
-                    <a class="buy-btn" href="#" data-product="Agedefy Retinol Tablets" data-price="$2.90 USD" data-pack="30 Capsules">Buy on WhatsApp</a>
-                </div>
-            </div>
-
-            <!-- Product 6 -->
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="product-card">
-                    <div class="image-box">
-                        <img src="images/product6.png" class="img-fluid" alt="">
-                    </div>
-
-                    <h5>Immunity Elite Herbal Tablets</h5>
-
-                    <div class="price-row">
-                        <span class="price">$4.90 USD</span>
-                        <span class="capsules">45 Capsules</span>
-                    </div>
-
-                    <a class="buy-btn" href="#" data-product="Immunity Elite Herbal Tablets" data-price="$4.90 USD" data-pack="45 Capsules">Buy on WhatsApp</a>
-                </div>
-            </div>
-
-            <!-- Product 7 -->
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="product-card">
-                    <div class="image-box">
-                        <img src="images/product7.png" class="img-fluid" alt="">
-                    </div>
-
-                    <h5>Harmony Biotic Digestive Tablets</h5>
-
-                    <div class="price-row">
-                        <span class="price">$9.00 USD</span>
-                        <span class="capsules">70 Capsules</span>
-                    </div>
-
-                    <a class="buy-btn" href="#" data-product="Harmony Biotic Digestive Tablets" data-price="$9.00 USD" data-pack="70 Capsules">Buy on WhatsApp</a>
-                </div>
-            </div>
-
-            <!-- Product 8 -->
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="product-card">
-                    <span class="badge-sale">Save 10%</span>
-
-                    <div class="image-box">
-                        <img src="images/product8.png" class="img-fluid" alt="">
-                    </div>
-
-                    <h5>Scalp Replenish Hair Tablets</h5>
-
-                    <div class="price-row">
-                        <div>
-                            <span class="price">$7.00 USD</span>
-                            <span class="old-price">$9.90 USD</span>
-                        </div>
-
-                        <span class="capsules">80 Capsules</span>
-                    </div>
-
-                    <a class="buy-btn" href="#" data-product="Scalp Replenish Hair Tablets" data-price="$7.00 USD" data-pack="80 Capsules">Buy on WhatsApp</a>
-                </div>
-            </div>
-
         </div>
-
-        <div class="pagination-box mt-5">
-            <span>1 / 2</span>
-
-            <button class="next-btn">
-                Next <i class="fa-solid fa-arrow-right"></i>
-            </button>
-        </div>
-        </div>
-    </div>
-</section>
+    </section>
 
     <a href="https://wa.me/9061504694" class="whatsapp" target="_blank" rel="noopener noreferrer">
 
         <i class="bi bi-whatsapp"></i>
 
     </a>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-     <script src="js/social-icons.js" defer></script>
-     <script src="js/script.js"></script>
-<script src="script.js"></script>
-<script>
-    document.querySelectorAll('.buy-btn').forEach(function(button) {
-        const product = button.dataset.product || 'This product';
-        const price = button.dataset.price || 'Price not specified';
-        const pack = button.dataset.pack || 'Pack size not specified';
-        const message = `Hello, I would like to buy ${product}. Price: ${price}. Pack size: ${pack}. Please share availability and delivery details.`;
-        button.href = `https://wa.me/9061504694?text=${encodeURIComponent(message)}`;
-    });
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/social-icons.js" defer></script>
+    <script src="js/script.js"></script>
+    <script src="script.js"></script>
+    <!-- Cart script will manage quantity events dynamically -->

@@ -616,6 +616,182 @@ font-size:16px;
         font-size:20px;
     }
 }
+
+/*=========================================
+    LEADERSHIP TEAM SECTION
+=========================================*/
+
+.leadership-section {
+    background: #ffffff;
+    padding: 100px 0;
+    position: relative;
+}
+
+.leadership-card {
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #eef2f6;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.35s ease;
+}
+
+.leadership-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 45px rgba(13, 110, 253, 0.12);
+    border-color: rgba(13, 110, 253, 0.25);
+}
+
+.leadership-img-wrap {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    background: #f1f5f9;
+}
+
+.leadership-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.leadership-card:hover .leadership-img-wrap img {
+    transform: scale(1.05);
+}
+
+.leadership-badge-overlay {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    background: rgba(11, 28, 61, 0.88);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.leadership-content {
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.leadership-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0b1c3d;
+    margin-bottom: 4px;
+}
+
+.leadership-role {
+    color: #0d6efd;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    display: block;
+}
+
+.leadership-bio {
+    color: #5f6d7a;
+    font-size: 14.5px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    flex-grow: 1;
+}
+
+.leadership-responsibility {
+    background: #f8faff;
+    border-left: 3px solid #0d6efd;
+    border-radius: 0 8px 8px 0;
+    padding: 12px 14px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #334155;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.5;
+}
+
+.leadership-responsibility i {
+    color: #0d6efd;
+    font-size: 16px;
+    margin-top: 1px;
+    flex-shrink: 0;
+}
+
+.leadership-responsibility strong {
+    color: #0b1c3d;
+}
+
+.leadership-social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 16px;
+    border-top: 1px solid #f1f5f9;
+    margin-top: auto;
+}
+
+.leadership-social .social-link {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #f8f9fc;
+    border: 1px solid #e2e8f0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #475569;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.leadership-social .social-link:hover {
+    background: #0d6efd;
+    border-color: #0d6efd;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(13, 110, 253, 0.25);
+}
+
+@media(max-width: 991px) {
+    .leadership-section {
+        padding: 80px 0;
+    }
+    .leadership-img-wrap {
+        height: 300px;
+    }
+}
+
+@media(max-width: 768px) {
+    .leadership-section {
+        padding: 60px 0;
+    }
+    .leadership-img-wrap {
+        height: 280px;
+    }
+    .leadership-name {
+        font-size: 20px;
+    }
+}
+
 </style>
 </head>
 
@@ -652,10 +828,6 @@ font-size:16px;
 
                     <li class="nav-item">
                         <a class="nav-link active" href="about.html">About</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="pharma.html">Pharma</a>
                     </li>
 
                     <li class="nav-item">
@@ -798,6 +970,160 @@ font-size:16px;
 </section>
 
 
+<!-- ==========================================
+     LEADERSHIP TEAM SECTION
+========================================== -->
+<section id="leadership" class="leadership-section py-5">
+
+    <div class="container">
+
+        <!-- Section Heading -->
+        <div class="text-center mb-5">
+
+            <span class="section-tag">
+                EXECUTIVE LEADERSHIP
+            </span>
+
+            <h2 class="section-title mt-3">
+                Meet Our Leadership
+            </h2>
+
+            <p class="section-text mt-4">
+                Experienced leadership driving our vision, growth and success.
+            </p>
+
+        </div>
+
+        <!-- 3 Profile Cards -->
+        <div class="row g-4 justify-content-center">
+
+            <!-- Card 1: Chairman -->
+            <div class="col-lg-4 col-md-6 col-12">
+
+                <div class="leadership-card">
+
+                    <div class="leadership-img-wrap">
+                        <!-- Placeholder photo: replace img/team/chairman.jpg with actual Chairman portrait -->
+                        <img src="img/team/chairman.jpg" alt="Dr. K. S. Narayanan - Chairman & Founder" loading="lazy">
+                        <span class="leadership-badge-overlay">Chairman</span>
+                    </div>
+
+                    <div class="leadership-content">
+
+                        <h3 class="leadership-name">Dr. K. S. Narayanan</h3>
+
+                        <span class="leadership-role">Chairman & Founder</span>
+
+                        <p class="leadership-bio">
+                            Pioneering the strategic vision and corporate governance of Keysons Group since 2009. Committed to fostering enduring partnerships, healthcare access, and organizational integrity across every operational division.
+                        </p>
+
+                        <div class="leadership-responsibility">
+                            <i class="bi bi-award-fill"></i>
+                            <div>
+                                <strong>Strategic Governance:</strong> 30+ years leading pharmaceutical distribution, regulatory compliance, and institutional stewardship.
+                            </div>
+                        </div>
+
+                        <div class="leadership-social">
+                            <a href="#" class="social-link" aria-label="LinkedIn Profile of Chairman"><i class="bi bi-linkedin"></i></a>
+                            <a href="mailto:chairman@keysonsgroup.com" class="social-link" aria-label="Email Chairman"><i class="bi bi-envelope-fill"></i></a>
+                            <a href="tel:+919061504694" class="social-link" aria-label="Call Office"><i class="bi bi-telephone-fill"></i></a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Card 2: CEO -->
+            <div class="col-lg-4 col-md-6 col-12">
+
+                <div class="leadership-card">
+
+                    <div class="leadership-img-wrap">
+                        <!-- Placeholder photo: replace img/team/ceo.jpg with actual CEO portrait -->
+                        <img src="img/team/ceo.jpg" alt="Arun K. Menon - Chief Executive Officer" loading="lazy">
+                        <span class="leadership-badge-overlay">Chief Executive Officer</span>
+                    </div>
+
+                    <div class="leadership-content">
+
+                        <h3 class="leadership-name">Arun K. Menon</h3>
+
+                        <span class="leadership-role">CEO (Chief Executive Officer)</span>
+
+                        <p class="leadership-bio">
+                            Spearheading operational excellence, cross-division synergy, and commercial growth. Championing modern logistics infrastructure, tech integration, and nationwide healthcare distribution networks.
+                        </p>
+
+                        <div class="leadership-responsibility">
+                            <i class="bi bi-lightning-charge-fill"></i>
+                            <div>
+                                <strong>Operations & Growth:</strong> 20+ years driving market expansion, regional distribution networks, and enterprise scalability.
+                            </div>
+                        </div>
+
+                        <div class="leadership-social">
+                            <a href="#" class="social-link" aria-label="LinkedIn Profile of CEO"><i class="bi bi-linkedin"></i></a>
+                            <a href="mailto:ceo@keysonsgroup.com" class="social-link" aria-label="Email CEO"><i class="bi bi-envelope-fill"></i></a>
+                            <a href="tel:+919061504694" class="social-link" aria-label="Call Office"><i class="bi bi-telephone-fill"></i></a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Card 3: Manager -->
+            <div class="col-lg-4 col-md-6 col-12">
+
+                <div class="leadership-card">
+
+                    <div class="leadership-img-wrap">
+                        <!-- Placeholder photo: replace img/team/manager.jpg with actual Manager portrait -->
+                        <img src="img/team/manager.jpg" alt="Priya S. Sharma - General Manager" loading="lazy">
+                        <span class="leadership-badge-overlay">General Manager</span>
+                    </div>
+
+                    <div class="leadership-content">
+
+                        <h3 class="leadership-name">Priya S. Sharma</h3>
+
+                        <span class="leadership-role">Manager (Operations & Distribution)</span>
+
+                        <p class="leadership-bio">
+                            Directing day-to-day distribution operations, multi-district stockist logistics, and vendor compliance. Ensuring swift fulfillment, zero-delay protocols, and flawless customer satisfaction.
+                        </p>
+
+                        <div class="leadership-responsibility">
+                            <i class="bi bi-shield-check"></i>
+                            <div>
+                                <strong>Logistics & Compliance:</strong> 15+ years managing cold chain warehousing, district fleets, and operational quality control.
+                            </div>
+                        </div>
+
+                        <div class="leadership-social">
+                            <a href="#" class="social-link" aria-label="LinkedIn Profile of Manager"><i class="bi bi-linkedin"></i></a>
+                            <a href="mailto:operations@keysonsgroup.com" class="social-link" aria-label="Email Manager"><i class="bi bi-envelope-fill"></i></a>
+                            <a href="tel:+919061504694" class="social-link" aria-label="Call Office"><i class="bi bi-telephone-fill"></i></a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
 <!-- ======================
       TIMELINE
 ====================== -->
@@ -902,3 +1228,5 @@ coverage and logistics capability.
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
      <script src="js/social-icons.js" defer></script>
      <script src="js/script.js"></script>
+</body>
+</html>

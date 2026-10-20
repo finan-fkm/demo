@@ -1,0 +1,238 @@
+/* Global Unified Product Card Styles */
+
+product-card, .product-card {
+    display: flex !important;
+    flex-direction: column !important;
+    background: #ffffff !important;
+    border-radius: 18px !important; /* 18px rounded corners */
+    padding: 20px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important; /* Soft shadow */
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    height: 100% !important;
+    position: relative !important;
+    border: 1px solid #f1f5f9 !important;
+    box-sizing: border-box !important;
+}
+
+product-card:hover, .product-card:hover {
+    transform: translateY(-6px) !important; /* Slight lift */
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08) !important; /* Enhanced shadow */
+}
+
+/* Image Container */
+.product-card .image-box {
+    background: #f8fafc !important;
+    border-radius: 14px !important;
+    height: 220px !important; /* Equal image box size for every product */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    overflow: hidden !important;
+    margin-bottom: 20px !important;
+    padding: 15px !important;
+    position: relative !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.product-card .image-box img {
+    max-height: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    width: auto !important;
+    object-fit: contain !important; /* Maintain aspect ratio using object-fit: contain */
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.product-card:hover .image-box img {
+    transform: scale(1.05) !important;
+}
+
+/* Badges */
+.product-card .badge-sale {
+    position: absolute !important;
+    top: 15px !important;
+    right: 15px !important;
+    background: #ef4444 !important; /* Coral Red for sale badge */
+    color: #ffffff !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    padding: 4px 10px !important;
+    border-radius: 20px !important;
+    z-index: 2 !important;
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.2) !important;
+    border: none !important;
+}
+
+/* Product Title */
+.product-card h5 {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #0f172a !important;
+    line-height: 1.4 !important;
+    height: 44px !important; /* Same height and align consistently */
+    margin: 0 0 12px 0 !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    text-align: left !important;
+}
+
+/* Price & Capsule Row */
+.product-card .price-row {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 16px !important;
+    min-height: 24px !important;
+    width: 100% !important;
+}
+
+.product-card .price-container {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.product-card .price {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+}
+
+.product-card .old-price {
+    font-size: 13px !important;
+    color: #94a3b8 !important;
+    text-decoration: line-through !important;
+}
+
+.product-card .capsules {
+    font-size: 13px !important;
+    color: #64748b !important;
+    font-weight: 500 !important;
+}
+
+/* Quantity Wrapper */
+.product-card .quantity-wrapper {
+    margin-top: auto !important; /* Push elements below to align perfectly at the bottom */
+    margin-bottom: 16px !important;
+    width: 100% !important;
+}
+
+/* Quantity Selector: rounded pill container */
+.product-card .quantity-selector {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    height: 50px !important; /* Height: 50px */
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 25px !important; /* Full-width rounded pill container */
+    padding: 0 8px !important;
+    box-sizing: border-box !important;
+}
+
+.product-card .quantity-btn {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 50% !important; /* Circular +/- buttons */
+    border: none !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    padding: 0 !important;
+}
+
+.product-card .quantity-btn:hover:not(:disabled) {
+    background: #f1f5f9 !important;
+    transform: scale(1.05) !important;
+    color: #000000 !important;
+}
+
+.product-card .quantity-btn:disabled {
+    opacity: 0.5 !important;
+    cursor: not-allowed !important;
+    box-shadow: none !important;
+}
+
+.product-card .quantity-btn .btn-inner {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    color: inherit !important;
+    font-size: 14px !important;
+}
+
+.product-card .quantity-value {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: #0f172a !important;
+    user-select: none !important;
+}
+
+/* Action Buttons Container */
+.product-card .product-card-buttons {
+    display: flex !important;
+    gap: 10px !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+}
+
+.product-card .product-card-buttons .btn {
+    flex: 1 !important;
+    height: 48px !important; /* Equal height and align perfectly */
+    border-radius: 12px !important; /* Rounded corners */
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    border: none !important;
+    cursor: pointer !important;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
+}
+
+/* Add to Cart Button */
+.product-card .btn-add-cart {
+    background-color: #0f172a !important; /* Black background */
+    color: #ffffff !important; /* White text */
+}
+
+.product-card .btn-add-cart:hover {
+    background-color: #1e293b !important; /* Slightly lighter black */
+    transform: translateY(-2px) !important; /* Lift animation */
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15) !important;
+    color: #ffffff !important;
+}
+
+/* Buy on WhatsApp Button */
+.product-card .btn-wa-buy {
+    background-color: #25D366 !important; /* WhatsApp Green (#25D366) */
+    color: #ffffff !important; /* White text */
+}
+
+.product-card .btn-wa-buy:hover {
+    background-color: #20ba5a !important;
+    transform: translateY(-2px) !important; /* Lift animation */
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.15) !important;
+    color: #ffffff !important;
+}
+
+/* Ensure font and text alignment style safety */
+.product-card * {
+    font-family: 'Inter', 'Poppins', sans-serif !important;
+}

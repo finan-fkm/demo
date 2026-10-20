@@ -12,6 +12,24 @@ class SocialMediaIcons extends HTMLElement {
             document.head.appendChild(link);
         }
 
+        // Dynamically load product-card.js if not already loaded
+        if (!document.getElementById('product-card-js-loader')) {
+            const cardScript = document.createElement('script');
+            cardScript.id = 'product-card-js-loader';
+            cardScript.src = 'js/product-card.js';
+            cardScript.defer = true;
+            document.body.appendChild(cardScript);
+        }
+
+        // Dynamically load cart.js if not already loaded
+        if (!document.getElementById('cart-js-loader')) {
+            const cartScript = document.createElement('script');
+            cartScript.id = 'cart-js-loader';
+            cartScript.src = 'js/cart.js';
+            cartScript.defer = true;
+            document.body.appendChild(cartScript);
+        }
+
         // Render the social icons
         this.innerHTML = `
             <div class="social-icons">

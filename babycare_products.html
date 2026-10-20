@@ -321,234 +321,66 @@ body{
     padding:70px 0;
 }
 
-.product-card{
-    position:relative;
-    background:#fff;
-    border-radius:16px;
-    padding:15px;
-    transition:.35s;
-    height:100%;
-}
+        /* Product card styling is now loaded globally from css/product-card.css */
 
-.product-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 12px 30px rgba(0,0,0,.12);
-}
+        .pagination-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 60px;
+        }
 
-.image-box{
-    background:#f5f5f5;
-    border-radius:14px;
-    height:250px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    overflow:hidden;
-    margin-bottom:18px;
-}
+        .pagination-box span {
+            font-weight: 600;
+            color: #666;
+        }
 
-.image-box img{
-    width:140px;
-    transition:.4s;
-}
+        .next-btn {
+            border: none;
+            background: #d9ff29;
+            padding: 14px 50px;
+            border-radius: 30px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: .3s;
+        }
 
-.product-card:hover .image-box img{
-    transform:scale(1.08);
-}
+        .next-btn:hover {
+            background: #c8ef18;
+            transform: translateY(-2px);
+        }
 
-.badge-sale{
-    position:absolute;
-    top:18px;
-    right:18px;
-    background:#d9ff29;
-    color:#000;
-    font-size:12px;
-    font-weight:700;
-    padding:5px 10px;
-    border-radius:4px;
-}
+        .next-btn i {
+            margin-left: 8px;
+        }
 
-.product-card h5{
-    font-size:16px;
-    font-weight:600;
-    color:#333;
-    line-height:24px;
-    min-height:50px;
-    margin-bottom:15px;
-}
+        /* Large Tablet */
+        @media(max-width:992px) {
+        }
 
-.price-row{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-end;
-    gap:10px;
-}
+        /* Tablet */
+        @media(max-width:768px) {
+            .pagination-box {
+                flex-direction: column;
+                gap: 20px;
+            }
 
-.price{
-    font-weight:700;
-    color:#222;
-    font-size:15px;
-}
+            .next-btn {
+                width: 100%;
+            }
+        }
 
-.old-price{
-    margin-left:6px;
-    color:#9c9c9c;
-    text-decoration:line-through;
-    font-size:13px;
-}
+        /* Mobile */
+        @media(max-width:576px) {
+            .products {
+                padding: 50px 0;
+            }
 
-.capsules{
-    color:#777;
-    font-size:13px;
-    white-space:nowrap;
-}
-
-.buy-btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    width:100%;
-    margin-top:14px;
-    padding:10px 12px;
-    border-radius:10px;
-    background:#25D366;
-    color:#fff;
-    text-decoration:none;
-    font-size:14px;
-    font-weight:600;
-    transition:.3s;
-}
-
-.buy-btn:hover{
-    background:#1da851;
-    color:#fff;
-}
-
-.pagination-box{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-top:60px;
-}
-
-.pagination-box span{
-    font-weight:600;
-    color:#666;
-}
-
-.next-btn{
-    border:none;
-    background:#d9ff29;
-    padding:14px 50px;
-    border-radius:30px;
-    font-weight:700;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.next-btn:hover{
-    background:#c8ef18;
-    transform:translateY(-2px);
-}
-
-.next-btn i{
-    margin-left:8px;
-}
-
-/* Large Tablet */
-@media(max-width:992px){
-
-.image-box{
-    height:220px;
-}
-
-.image-box img{
-    width:120px;
-}
-
-}
-
-/* Tablet */
-@media(max-width:768px){
-
-.product-card{
-    margin-bottom:20px;
-}
-
-.image-box{
-    height:200px;
-}
-
-.image-box img{
-    width:110px;
-}
-
-.product-card h5{
-    font-size:15px;
-}
-
-.price-row{
-    flex-direction:column;
-    align-items:flex-start;
-}
-
-.pagination-box{
-    flex-direction:column;
-    gap:20px;
-}
-
-.next-btn{
-    width:100%;
-}
-
-}
-
-/* Mobile */
-@media(max-width:576px){
-
-.products{
-    padding:50px 0;
-}
-
-.image-box{
-    height:180px;
-}
-
-.image-box img{
-    width:90px;
-}
-
-.product-card{
-    padding:12px;
-}
-
-.product-card h5{
-    font-size:14px;
-    line-height:22px;
-}
-
-.price{
-    font-size:14px;
-}
-
-.old-price{
-    font-size:12px;
-}
-
-.capsules{
-    font-size:12px;
-}
-
-.badge-sale{
-    font-size:10px;
-    padding:4px 8px;
-}
-
-.next-btn{
-    padding:12px 30px;
-}
-
-}
-</style>
+            .next-btn {
+                padding: 12px 30px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -620,164 +452,88 @@ body{
 
             <!-- Product 1 -->
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="product-card">
-                    <div class="image-box">
-                        <img src="images/product1.png" class="img-fluid" alt="">
-                    </div>
-                
-                    <h5>Scalpcare Biotin Tablets</h5>
-
-                    <div class="price-row">
-                        <span class="price">$5.00 USD</span>
-                        <span class="capsules">60 Capsules</span>
-                    </div>
-
-                    <a class="buy-btn" href="#" data-product="Scalpcare Biotin Tablets" data-price="$5.00 USD" data-pack="60 Capsules">Buy on WhatsApp</a>
-                </div>
+                <product-card
+                    name="Scalpcare Biotin Tablets"
+                    price="$5.00 USD"
+                    capsules="60 Capsules"
+                    image="images/product1.png">
+                </product-card>
             </div>
 
             <!-- Product 2 -->
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="product-card">
-                    <div class="image-box">
-                        <img src="images/product2.png" class="img-fluid" alt="">
-                    </div>
-
-                    <h5>Optigut Probiotic Blend Tablets</h5>
-
-                    <div class="price-row">
-                        <span class="price">$3.90 USD</span>
-                        <span class="capsules">50 Capsules</span>
-                    </div>
-
-                    <a class="buy-btn" href="#" data-product="Optigut Probiotic Blend Tablets" data-price="$3.90 USD" data-pack="50 Capsules">Buy on WhatsApp</a>
-                </div>
+                <product-card
+                    name="Optigut Probiotic Blend Tablets"
+                    price="$3.90 USD"
+                    capsules="50 Capsules"
+                    image="images/product2.png">
+                </product-card>
             </div>
 
             <!-- Product 3 -->
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="product-card">
-                    <span class="badge-sale">Save 5%</span>
-
-                    <div class="image-box">
-                        <img src="images/product3.png" class="img-fluid" alt="">
-                    </div>
-
-                    <h5>Gutbalance Prebiotic Tablets</h5>
-
-                    <div class="price-row">
-                        <div>
-                            <span class="price">$4.90 USD</span>
-                            <span class="old-price">$5.50 USD</span>
-                        </div>
-
-                        <span class="capsules">40 Capsules</span>
-                    </div>
-
-                    <a class="buy-btn" href="#" data-product="Gutbalance Prebiotic Tablets" data-price="$4.90 USD" data-pack="40 Capsules">Buy on WhatsApp</a>
-                </div>
+                <product-card
+                    name="Gutbalance Prebiotic Tablets"
+                    price="$4.90 USD"
+                    old-price="$5.50 USD"
+                    sale-badge="Save 5%"
+                    capsules="40 Capsules"
+                    image="images/product3.png">
+                </product-card>
             </div>
 
             <!-- Product 4 -->
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="product-card">
-                    <div class="image-box">
-                        <img src="images/product4.png" class="img-fluid" alt="">
-                    </div>
-
-                    <h5>Vitality Boost Hair Tablets</h5>
-
-                    <div class="price-row">
-                        <span class="price">$6.00 USD</span>
-                        <span class="capsules">80 Capsules</span>
-                    </div>
-
-                    <a class="buy-btn" href="#" data-product="Vitality Boost Hair Tablets" data-price="$6.00 USD" data-pack="80 Capsules">Buy on WhatsApp</a>
-                </div>
+                <product-card
+                    name="Vitality Boost Hair Tablets"
+                    price="$6.00 USD"
+                    capsules="80 Capsules"
+                    image="images/product4.png">
+                </product-card>
             </div>
 
             <!-- Product 5 -->
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="product-card">
-                    <span class="badge-sale">Save 5%</span>
-
-                    <div class="image-box">
-                        <img src="images/product5.png" class="img-fluid" alt="">
-                    </div>
-
-                    <h5>Agedefy Retinol Tablets</h5>
-
-                    <div class="price-row">
-                        <div>
-                            <span class="price">$2.90 USD</span>
-                            <span class="old-price">$4.50 USD</span>
-                        </div>
-
-                        <span class="capsules">30 Capsules</span>
-                    </div>
-
-                    <a class="buy-btn" href="#" data-product="Agedefy Retinol Tablets" data-price="$2.90 USD" data-pack="30 Capsules">Buy on WhatsApp</a>
-                </div>
+                <product-card
+                    name="Agedefy Retinol Tablets"
+                    price="$2.90 USD"
+                    old-price="$4.50 USD"
+                    sale-badge="Save 5%"
+                    capsules="30 Capsules"
+                    image="images/product5.png">
+                </product-card>
             </div>
 
             <!-- Product 6 -->
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="product-card">
-                    <div class="image-box">
-                        <img src="images/product6.png" class="img-fluid" alt="">
-                    </div>
-
-                    <h5>Immunity Elite Herbal Tablets</h5>
-
-                    <div class="price-row">
-                        <span class="price">$4.90 USD</span>
-                        <span class="capsules">45 Capsules</span>
-                    </div>
-
-                    <a class="buy-btn" href="#" data-product="Immunity Elite Herbal Tablets" data-price="$4.90 USD" data-pack="45 Capsules">Buy on WhatsApp</a>
-                </div>
+                <product-card
+                    name="Immunity Elite Herbal Tablets"
+                    price="$4.90 USD"
+                    capsules="45 Capsules"
+                    image="images/product6.png">
+                </product-card>
             </div>
 
             <!-- Product 7 -->
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="product-card">
-                    <div class="image-box">
-                        <img src="images/product7.png" class="img-fluid" alt="">
-                    </div>
-
-                    <h5>Harmony Biotic Digestive Tablets</h5>
-
-                    <div class="price-row">
-                        <span class="price">$9.00 USD</span>
-                        <span class="capsules">70 Capsules</span>
-                    </div>
-
-                    <a class="buy-btn" href="#" data-product="Harmony Biotic Digestive Tablets" data-price="$9.00 USD" data-pack="70 Capsules">Buy on WhatsApp</a>
-                </div>
+                <product-card
+                    name="Harmony Biotic Digestive Tablets"
+                    price="$9.00 USD"
+                    capsules="70 Capsules"
+                    image="images/product7.png">
+                </product-card>
             </div>
 
             <!-- Product 8 -->
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="product-card">
-                    <span class="badge-sale">Save 10%</span>
-
-                    <div class="image-box">
-                        <img src="images/product8.png" class="img-fluid" alt="">
-                    </div>
-
-                    <h5>Scalp Replenish Hair Tablets</h5>
-
-                    <div class="price-row">
-                        <div>
-                            <span class="price">$7.00 USD</span>
-                            <span class="old-price">$9.90 USD</span>
-                        </div>
-
-                        <span class="capsules">80 Capsules</span>
-                    </div>
-
-                    <a class="buy-btn" href="#" data-product="Scalp Replenish Hair Tablets" data-price="$7.00 USD" data-pack="80 Capsules">Buy on WhatsApp</a>
-                </div>
+                <product-card
+                    name="Scalp Replenish Hair Tablets"
+                    price="$7.00 USD"
+                    old-price="$9.90 USD"
+                    sale-badge="Save 10%"
+                    capsules="80 Capsules"
+                    image="images/product8.png">
+                </product-card>
             </div>
 
         </div>
@@ -802,12 +558,4 @@ body{
      <script src="js/social-icons.js" defer></script>
      <script src="js/script.js"></script>
 <script src="script.js"></script>
-<script>
-    document.querySelectorAll('.buy-btn').forEach(function(button) {
-        const product = button.dataset.product || 'This product';
-        const price = button.dataset.price || 'Price not specified';
-        const pack = button.dataset.pack || 'Pack size not specified';
-        const message = `Hello, I would like to buy ${product}. Price: ${price}. Pack size: ${pack}. Please share availability and delivery details.`;
-        button.href = `https://wa.me/9061504694?text=${encodeURIComponent(message)}`;
-    });
-</script>
+    <!-- Cart script will manage quantity events dynamically -->
