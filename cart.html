@@ -140,9 +140,14 @@
         </div>
     </section>
 
-    <!-- WhatsApp Floating Action (Included globally but cart.js will load custom style overrides) -->
-    <a href="https://wa.me/9061504694" class="whatsapp" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-whatsapp"></i>
+    <!-- Floating Shopping Cart Button -->
+    <a href="cart.html" id="floating-cart-btn" class="floating-cart-btn" role="button" aria-label="Shopping Cart" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+        <svg class="cart-floating-icon" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="8" cy="21" r="1"></circle>
+            <circle cx="19" cy="21" r="1"></circle>
+            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+        </svg>
+        <span class="cart-badge" id="cart-badge-count" style="display: none;">0</span>
     </a>
 
     <!-- Footer Scripts -->
